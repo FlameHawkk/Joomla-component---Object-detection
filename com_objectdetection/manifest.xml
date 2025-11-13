@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+    <name>Object Detection</name>
+    <version>1.0.3</version>
+    <description>YOLO Object Detection Component</description>
+    
+    <scriptfile>script.php</scriptfile>
+    
+    <languages folder="site/language">
+        <language tag="en-GB">en-GB/en-GB.com_objectdetection.ini</language>
+        <language tag="en-GB">en-GB/en-GB.com_objectdetection.sys.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.com_objectdetection.ini</language>
+        <language tag="ru-RU">ru-RU/ru-RU.com_objectdetection.sys.ini</language>
+    </languages>
+    
+    <administration>
+        <menu img="class:default">Object Detection</menu>
+        <languages folder="administrator/language">
+            <language tag="en-GB">en-GB/en-GB.com_objectdetection.ini</language>
+            <language tag="en-GB">en-GB/en-GB.com_objectdetection.sys.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.com_objectdetection.ini</language>
+            <language tag="ru-RU">ru-RU/ru-RU.com_objectdetection.sys.ini</language>
+        </languages>
+        <files folder="administrator">
+            <folder>helpers</folder>
+            <folder>cron</folder>
+            <folder>language</folder>
+            <folder>controllers</folder>
+            <folder>views</folder>
+            <filename>controller.php</filename>
+            <filename>objectdetection.php</filename>
+            <folder>components/com_objectdetection</folder>
+        </files>
+    </administration>
+    
+    <files folder="site">
+        <folder>language</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+        <filename>controller.php</filename>
+        <filename>objectdetection.php</filename>
+    </files>
+    
+    <media folder="media" destination="com_objectdetection">
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+</extension>

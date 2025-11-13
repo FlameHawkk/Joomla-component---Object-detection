@@ -1,0 +1,413 @@
+/* media/css/objectdetection.css */
+
+.object-detection-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.component-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    /* Убираем border-bottom */
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.component-header h1 {
+    color: #1a3a5f;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.component-description {
+    color: #6c757d;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.upload-section {
+    margin-bottom: 2rem;
+}
+
+.drop-zone {
+    border: 2px dashed #adb5bd;
+    border-radius: 8px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: #ffffff;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.drop-zone:hover {
+    border-color: #1a3a5f;
+    background: #f8f9fa;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.drop-zone.highlight {
+    border-color: #1a3a5f;
+    background: #f0f4f8;
+    border-style: solid;
+}
+
+.drop-zone__prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    color: #495057;
+}
+
+.drop-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: #6c757d;
+}
+
+.drop-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #495057;
+}
+
+.drop-or {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.file-types {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.preview-container {
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.preview-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+
+.preview-container img {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.remove-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #dee2e6;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: #6c757d;
+    font-size: 14px;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+    background: #fff;
+    border-color: #dc3545;
+    color: #dc3545;
+    transform: scale(1.05);
+}
+
+.file-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.file-name {
+    font-weight: 500;
+    color: #495057;
+    word-break: break-word;
+    max-width: 100%;
+}
+
+.file-size {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+#confidence-value {
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.form-range {
+    margin: 0.5rem 0;
+}
+
+/* Results specific styles */
+.results-grid {
+    margin-bottom: 1.5rem;
+}
+
+.results-grid .card {
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    padding: 0.75rem 1rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #495057;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.result-image {
+    max-height: 350px;
+    width: auto;
+    border-radius: 4px;
+}
+
+.detection-info {
+    font-size: 0.9rem;
+}
+
+.detections-list .table {
+    margin-bottom: 0;
+}
+
+.detections-list .table th {
+    border-top: none;
+    font-weight: 600;
+    color: #495057;
+    background: #f8f9fa;
+}
+
+.coordinates-cell {
+    white-space: nowrap;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .object-detection-container {
+        padding: 1rem;
+    }
+    
+    .component-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .drop-zone {
+        padding: 1.5rem 1rem;
+    }
+    
+    .results-grid .col-md-6 {
+        margin-bottom: 1rem;
+    }
+    
+    .result-image {
+        max-height: 250px;
+    }
+    
+    .detection-info .col-md-4 {
+        margin-bottom: 0.75rem;
+    }
+    
+    .coordinates-cell {
+        white-space: normal;
+        font-size: 0.8rem;
+    }
+}
+
+/* Utility classes */
+.text-small {
+    font-size: 0.875rem;
+}
+
+.border-light {
+    border-color: #e9ecef !important;
+}
+
+
+/* Lightbox styles - ОБНОВЛЕННЫЕ */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 4px;
+    transition: transform 0.3s ease; /* Плавная анимация */
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ОБНОВЛЕННЫЕ СТИЛИ КНОПОК НАВИГАЦИИ - прямоугольные */
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 1.5rem;
+    width: 60px; /* Более широкие */
+    height: 80px; /* Вытянутые вверх */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+/* ОБНОВЛЕННАЯ КНОПКА СКАЧИВАНИЯ - в стиле Cassiopea */
+.lightbox-download {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--btn-primary-bg, #0d6efd);
+    color: white;
+    border: 1px solid var(--btn-primary-border-color, #0d6efd);
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    transition: all 0.15s ease-in-out;
+}
+
+.lightbox-download:hover {
+    background: var(--btn-primary-hover-bg, #0b5ed7);
+    border-color: var(--btn-primary-hover-border-color, #0a58ca);
+    color: white;
+    text-decoration: none;
+    transform: translateX(-50%) translateY(-1px);
+}
+
+/* ОБНОВЛЕННЫЕ СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ В РЕЗУЛЬТАТАХ */
+.result-image {
+    cursor: pointer;
+    transition: transform 0.18s ease; /* Cкорость анимации */
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.result-image:hover {
+    transform: scale(1.031); /* Увеличение */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Стили для иконок стрелок */
+.lightbox-nav .icon-chevron-left,
+.lightbox-nav .icon-chevron-right {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .lightbox-nav {
+        width: 50px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+    
+    .lightbox-prev {
+        left: 10px;
+    }
+    
+    .lightbox-next {
+        right: 10px;
+    }
+    
+    .result-image:hover {
+        transform: scale(1.02); /* Меньшее увеличение на мобильных */
+    }
+}
